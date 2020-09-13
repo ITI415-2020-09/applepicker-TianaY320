@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AppleTree : MonoBehaviour
 {
+
+
     [Header("Set in Inspector")]
     // Apple Prefab (makes apples appear)
     public GameObject applePrefab;
@@ -23,12 +25,13 @@ public class AppleTree : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Calls apples after waiting two seconds
+        //Creates apples into scene
         Invoke("DropApple", 2f);
     }
 
     void DropApple()
     {
+        //Creates apples after waiting two seconds
         GameObject apple = Instantiate<GameObject>(applePrefab);
         apple.transform.position = transform.position;
         Invoke("DropApple", secondsBetweenAppleDrops);
@@ -37,7 +40,6 @@ public class AppleTree : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Basic Movement
 
         //current position of the AppleTree
         Vector3 pos = transform.position;
