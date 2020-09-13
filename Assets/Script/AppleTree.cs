@@ -31,6 +31,14 @@ public class AppleTree : MonoBehaviour
     void Update()
     {
         //Basic Movement
+
+        //current position of the AppleTree
+        Vector3 pos = transform.position;
+        //movement is time based 
+        pos.x += speed * Time.deltaTime;
+        //moves AppleTree to new position
+        transform.position = pos;
+
         //Changing Direction
         
     }
