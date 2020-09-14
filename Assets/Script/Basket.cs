@@ -14,6 +14,17 @@ public class Basket : MonoBehaviour
     void Update()
     {
         //position of mouse
-        Vector3 mousePos2D=
+        Vector3 mousePos2D = Input.mousePosition;
+
+        //z position of Camera sets how far mouse is
+        mousePos2D.z = -Camera.main.transform.position.z;
+
+        //convert 2D to 3D
+        Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);
+
+        //move basket to the position of the mouse
+        Vector3 pos = this.transform.position;
+        pos.x = mousePos3D.x;
+        this.transform.position = pos;
     }
 }
