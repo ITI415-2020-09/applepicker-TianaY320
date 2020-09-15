@@ -380,16 +380,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7580850834597081062, guid: 3e37e35c693c9084ba077153870e6362, type: 3}
       propertyPath: speed
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7580850834597081062, guid: 3e37e35c693c9084ba077153870e6362, type: 3}
       propertyPath: applePrefab
       value: 
       objectReference: {fileID: 3054904868002793134, guid: fc2b0aa3566cba54e823ad7d7b81edd0, type: 3}
-    - target: {fileID: 7580850834597081062, guid: 3e37e35c693c9084ba077153870e6362, type: 3}
-      propertyPath: chanceToChangeDirections
-      value: 0.3
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2363331411313749845, guid: 3e37e35c693c9084ba077153870e6362, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e37e35c693c9084ba077153870e6362, type: 3}
