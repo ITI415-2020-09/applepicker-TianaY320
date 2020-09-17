@@ -43,7 +43,13 @@ public class Basket : MonoBehaviour
             int score = int.Parse(scoreGT.text);
             score += 100;
             //converts score total to string and displays it
-            scoreGT.text=score.ToString()
+            scoreGT.text = score.ToString();
+            
+            //Keeps track of high score
+            if (score > HighScore.score)
+            {
+                HighScore.score = score;
+            }
         }
     }
 }
