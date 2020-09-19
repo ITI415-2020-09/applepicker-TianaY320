@@ -31,21 +31,24 @@ public class ApplePicker : MonoBehaviour
 
     public void AppleDestroyed()
     {
+        //organizes all the apples into this array
         GameObject[] tAppleArray = GameObject.FindGameObjectsWithTag("Apple");
         foreach(GameObject tGO in tAppleArray)
         {
+            //all the apples ger destroyed(erased from the heirarchy) 
             Destroy(tGO);
         }
 
         int basketIndex = basketList.Count - 1;
 
         GameObject tBasketGO = basketList[basketIndex];
+
         basketList.RemoveAt(basketIndex);
         Destroy(tBasketGO);
 
         if (basketList.Count == 0)
         {
-            SceneManager.LoadScene("_Scene_0");
+            SceneManager.LoadScene("ApplePicker");
         }
     }
 
